@@ -10,22 +10,28 @@
  */
 int main(void)
 {
-	int n, m, l;
+	int x, y, z;
 
-	for (n = 48; n < 58; n++)
+	for (x = 48; x <= 57; x++)
 	{
-		for (m = 49; m < 58; m++)
+		for (y = 48; y <= 57; y++)
 		{
-			for (l = 50; l < 58; l++)
+			for (z = 48; z <= 57; z++)
 			{
-				if (l > m && m > n)
+				if (x == y || x == z || y == z || y <= x || z <= y)
 				{
-					putchar(m);
-					putchar(n);
-					putchar(l);
-					if (n != 55 || m != 56)
+				}
+				else
+				{
+					putchar(x);
+					putchar(y);
+					putchar(z);
+					if (x == 55 && y == 56 && z == 57)
 					{
-						putchar(',');
+					}
+					else
+					{
+						putchar(44);
 						putchar(' ');
 					}
 				}
