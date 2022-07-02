@@ -10,32 +10,30 @@
  */
 int main(void)
 {
-	int i;
-	int j;
-	int numPrinted = 0;
+	int i, e;
 
-	for (i = 48; i <= 56; i++)
+	i = 48;
+	e = 48;
+
+	while (e < 58)
 	{
-		for (j = 48; j <= 57; j++)
+		i = 48;
+		while (i < 58)
 		{
-			if (i != j)
-			{
-				int otherPerm = (10 * j) + i;
-				int current = (10 * i) + j;
-
-				if (current < otherPerm)
-				{
-					putchar(44);
-					putchar(32);
-				}
-
+			if (e != i && e < i)
+			{											putchar(e);
 				putchar(i);
-				putchar(j);
-				numPrinted++;
+				if (i == 57 && e == 56)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
 			}
+			i++;
 		}
+		e++;
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
