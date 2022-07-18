@@ -6,7 +6,7 @@
  *    * @b: character to fill s with
  *     * @n: number of bytes in c to be filled
  *      *
- *       * Description: fills numver of bytes n in string s with the character b
+ * Description: fills numver of bytes n in string s with the character b
  *        *
  *         * Return: pointer to s
  */
@@ -18,6 +18,5 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
-
 	return (s);
 }
